@@ -5,7 +5,7 @@ import { TEInput, TERipple } from "tw-elements-react";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [setauthenticated] = useState(
+  const [, setauthenticated] = useState(
     localStorage.getItem(localStorage.getItem("authenticated") || false)
   );
 
