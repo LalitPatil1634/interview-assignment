@@ -5,11 +5,11 @@ import { TEInput, TERipple } from "tw-elements-react";
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [authenticated, setauthenticated] = useState(
+  const [setauthenticated] = useState(
     localStorage.getItem(localStorage.getItem("authenticated") || false)
   );
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const users = [{ email: "user@user.com", password: "123456" }];
   const handleSubmit = (e) => {
@@ -18,7 +18,7 @@ const Login = () => {
     if (account && account.password === password) {
       setauthenticated(true);
       localStorage.setItem("authenticated", true);
-      navigate('/dashboard')
+      navigate("/dashboard");
     }
   };
 
